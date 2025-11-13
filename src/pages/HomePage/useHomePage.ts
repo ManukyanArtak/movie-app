@@ -5,6 +5,7 @@ import {
   useSearchMoviesQuery,
   useMoviesByGenreQuery,
 } from "../../hooks/queries";
+import { getActiveQuery } from "./helper";
 
 export const useHomePage = () => {
   const [query, setQuery] = useState("");
@@ -15,11 +16,13 @@ export const useHomePage = () => {
   const searchQuery = useSearchMoviesQuery(debouncedQuery);
   const genreQuery = useMoviesByGenreQuery(selectedGenreId ?? 0);
 
-  const activeQuery = debouncedQuery
-    ? searchQuery
-    : selectedGenreId !== null
-    ? genreQuery
-    : popularQuery;
+  const activeQuery = getActiveQuery({
+    debouncedQuery,
+    selectedGenreId,
+    searchQuery,
+    genreQuery,
+    popularQuery,
+  });
 
   const movies = useMemo(
     () => activeQuery.data?.pages.flatMap((page) => page.results) ?? [],
@@ -63,4 +66,3 @@ export const useHomePage = () => {
     handleClearSearch,
   };
 };
-
