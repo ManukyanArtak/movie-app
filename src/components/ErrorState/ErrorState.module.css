@@ -1,0 +1,26 @@
+.errorState {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.errorContainer {
+  text-align: center;
+  padding: 40px;
+}
+
+.errorContainer h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
+  color: var(--color-error);
+}
+
+.errorContainer p {
+  font-size: 18px;
+  color: var(--text-tertiary);
+  margin-bottom: 24px;
+}
+

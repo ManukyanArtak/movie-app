@@ -1,0 +1,2 @@
+export { MovieDetailsPage } from './MovieDetailsPage';
+

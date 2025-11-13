@@ -1,0 +1,44 @@
+.homePage {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.homeContent {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+  padding: 24px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.mainContent {
+  min-height: 400px;
+}
+
+.errorMessage {
+  background: var(--bg-secondary);
+  color: var(--color-error);
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  border: 1px solid var(--border-primary);
+}
+
+.loadMoreTrigger {
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .homeContent {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 16px;
+  }
+
+  .sidebar {
+    margin-bottom: 16px;
+  }
+}
+

@@ -1,0 +1,106 @@
+.trailerCarousel {
+  margin-top: 40px;
+}
+
+.trailerCarouselTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.trailerCarouselContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.trailerWrapper {
+  flex: 1;
+  background: var(--bg-card);
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 16px;
+  border: 1px solid var(--border-primary);
+}
+
+.trailerIframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+}
+
+.trailerName {
+  margin: 12px 0 0 0;
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.carouselButton {
+  background: var(--overlay-light);
+  border: none;
+  color: var(--text-inverse);
+  font-size: 48px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+  flex-shrink: 0;
+  backdrop-filter: blur(4px);
+}
+
+.carouselButton:hover {
+  background: var(--overlay-dark);
+  transform: scale(1.1);
+}
+
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: var(--border-secondary);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  padding: 0;
+}
+
+.dot:hover {
+  background: var(--text-tertiary);
+}
+
+.dot.active {
+  background: var(--btn-primary-bg);
+  transform: scale(1.3);
+}
+
+@media (max-width: 768px) {
+  .carouselButton {
+    width: 40px;
+    height: 40px;
+    font-size: 36px;
+  }
+
+  .trailerWrapper {
+    padding: 12px;
+  }
+
+  .trailerName {
+    font-size: 14px;
+  }
+}
+
