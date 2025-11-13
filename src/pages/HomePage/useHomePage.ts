@@ -6,14 +6,14 @@ import {
   useMoviesByGenreQuery,
 } from "../../hooks/queries";
 
-export const useMovies = () => {
+export const useHomePage = () => {
   const [query, setQuery] = useState("");
   const debouncedQuery = useDebounce(query, 500);
   const [selectedGenreId, setSelectedGenreId] = useState<number | null>(null);
 
   const popularQuery = usePopularMoviesQuery();
   const searchQuery = useSearchMoviesQuery(debouncedQuery);
-  const genreQuery = useMoviesByGenreQuery(selectedGenreId);
+  const genreQuery = useMoviesByGenreQuery(selectedGenreId ?? 0);
 
   const activeQuery = debouncedQuery
     ? searchQuery
@@ -63,3 +63,4 @@ export const useMovies = () => {
     handleClearSearch,
   };
 };
+

@@ -4,7 +4,7 @@ import {
   useMovieVideosQuery,
 } from "../../hooks/queries";
 
-export const useMovieDetails = (movieId: string | undefined) => {
+export const useMovieDetails = (movieId: string) => {
   const movieQuery = useMovieDetailsQuery(movieId);
   const creditsQuery = useMovieCreditsQuery(movieId);
   const videosQuery = useMovieVideosQuery(movieId);

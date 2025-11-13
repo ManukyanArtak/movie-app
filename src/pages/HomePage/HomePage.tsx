@@ -1,4 +1,4 @@
-import { useMovies } from './useMovies';
+import { useHomePage } from './useHomePage';
 import styles from './HomePage.module.css';
 import { Header } from '../../components/Header';
 import { MovieGrid } from '../../components/Movie';
@@ -23,7 +23,7 @@ export const HomePage = () => {
     handleClearSearch,
     handleReset,
     handleLoadMore,
-  } = useMovies();
+  } = useHomePage();
 
   const { loadMoreRef } = useInfiniteScroll({
     isLoading,

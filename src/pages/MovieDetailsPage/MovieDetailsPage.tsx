@@ -14,6 +14,11 @@ export const MovieDetailsPage = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { toggleFavorite, isFavorite } = useFavorites();
+  
+  if (!id) {
+    return <ErrorState message="Movie ID is required" onBack={() => navigate('/')} />;
+  }
+  
   const { movie, cast, videos, isLoading, error } = useMovieDetails(id);
 
   if (isLoading) {

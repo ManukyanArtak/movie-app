@@ -19,11 +19,22 @@ A modern movie discovery app built with React, TypeScript, and the TMDb API.
 npm install
 ```
 
-2. (Optional) Create `.env.local` with your TMDb Access Token:
+2. Create environment variables:
 
+Copy `.env.example` to `.env.local` and fill in your TMDb API credentials:
+
+```bash
+cp .env.example .env.local
 ```
-VITE_TMDB_ACCESS_TOKEN=your_token_here
-```
+
+Then edit `.env.local` and add your TMDb Access Token. Get your token from [TMDb API Settings](https://www.themoviedb.org/settings/api).
+
+**Environment Variables:**
+
+- `VITE_TMDB_ACCESS_TOKEN` (Required) - Your TMDb API Bearer token
+- `VITE_API_BASE_URL` (Optional) - TMDb API base URL (default: `https://api.themoviedb.org/3`)
+- `VITE_IMAGE_BASE_URL` (Optional) - Image base URL for posters (default: `https://image.tmdb.org/t/p/w500`)
+- `VITE_BACKDROP_BASE_URL` (Optional) - Backdrop image base URL (default: `https://image.tmdb.org/t/p/original`)
 
 3. Start the development server:
 
@@ -48,7 +59,3 @@ npm run dev
 - Vite
 - React Router 7
 - TMDb API
-
-## License
-
-Open source for educational purposes.
