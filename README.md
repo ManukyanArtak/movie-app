@@ -21,13 +21,9 @@ npm install
 
 2. Create environment variables:
 
-Copy `.env.example` to `.env.local` and fill in your TMDb API credentials:
+Copy `.env.example` to `.env` and fill in your TMDb API credentials:
 
-```bash
-cp .env.example .env.local
-```
-
-Then edit `.env.local` and add your TMDb Access Token. Get your token from [TMDb API Settings](https://www.themoviedb.org/settings/api).
+Then edit `.env` and add your TMDb Access Token. Get your token from [TMDb API Settings](https://www.themoviedb.org/settings/api).
 
 **Environment Variables:**
 
